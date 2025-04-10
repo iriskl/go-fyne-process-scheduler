@@ -35,8 +35,3 @@ func NewPCB(pid int) *PCB {
 func (p *PCB) String() string {
 	return fmt.Sprintf("PID: %d, 状态: %s, 优先级: %d, 生命周期: %d", p.Pid, p.Status, p.Priority, p.Life)
 }
-
-// 生成一个在指定范围内的随机整数
-func randInt(min, max int) int {
-	return min + rand.Intn(max-min+1)
-}
