@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"image/color"
 	"os"
-	"path/filepath"
 	"strings"
 
 	"fyne.io/fyne/v2"
@@ -82,17 +81,6 @@ func loadFontData() []byte {
 	// 尝试使用内嵌的默认字体（Arial或其他拉丁字体）
 	fmt.Println("警告: 无法加载中文TTF字体，将使用系统默认字体（中文可能显示为乱码）")
 	return nil
-}
-
-// 在当前目录创建一个字体文件的副本
-func createLocalFontCopy(fontData []byte) string {
-	tempFontFile := filepath.Join(".", "chinese_font.ttf")
-	err := os.WriteFile(tempFontFile, fontData, 0644)
-	if err != nil {
-		fmt.Printf("创建字体副本失败: %v\n", err)
-		return ""
-	}
-	return tempFontFile
 }
 
 // 实现fyne.Theme接口
