@@ -2,6 +2,10 @@
 
 基于Go语言和Fyne GUI框架开发的多级反馈队列进程调度算法模拟器。此应用程序模拟操作系统如何管理和调度进程，展示进程状态变化、优先级调整和资源分配。
 
+## 运行效果
+![image](https://github.com/user-attachments/assets/7ea1dfdf-0c1f-4014-b1a6-9b42f7ae70dc)
+
+
 ## 项目结构
 
 ```
